@@ -1,0 +1,2 @@
+SNGEXPORTER_PARAMS="--socket-path=/opt/syslog-ng/var/syslog-ng.ctl"
+

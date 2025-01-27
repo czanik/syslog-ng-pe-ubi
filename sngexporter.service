@@ -1,0 +1,12 @@
+[Unit]
+Description=Syslog-ng Prometheus Exporter Service
+After=syslog-ng.service
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/sngexporter
+ExecStart=python3 /usr/local/bin/sng_exporter.py $SNGEXPORTER_PARAMS
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
